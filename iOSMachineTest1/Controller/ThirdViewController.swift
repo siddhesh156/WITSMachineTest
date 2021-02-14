@@ -14,8 +14,7 @@ class ThirdViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        Global.url = "http://www.witsindia.com/ftp/test/games.xml"
-        print("3 ",Global.url)
+        
     }
     
 

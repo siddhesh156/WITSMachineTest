@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  iOSMachineTest1
 //
 //  Created by siddhesh on 13/02/21.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        Global.url = "http://www.witsindia.com/ftp/test/music.xml"
-        print("2 ",Global.url)
-    }
+     
+        
+        }
 
 
 }
