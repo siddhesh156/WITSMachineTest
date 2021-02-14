@@ -28,6 +28,15 @@ class TableViewController: UITableViewController {
         tableViewTest.delegate = self
         tableViewTest.dataSource = self
     
+        let alert = UIAlertController(title: nil, message: "Loading...", preferredStyle: .alert)
+        
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.medium
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
         
         books = Global.books1
         if(Global.indexTab==0){
@@ -43,6 +52,15 @@ class TableViewController: UITableViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        let alert = UIAlertController(title: nil, message: "Loading...", preferredStyle: .alert)
+        
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.medium
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
        
         if(Global.books1.count==0 || Global.music1.count==0 || Global.game1.count==0){
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -58,7 +76,12 @@ class TableViewController: UITableViewController {
             }
            
             self.tableViewTest.reloadData()
+            
+            self.dismiss(animated: false, completion: nil)
+            
+          
         }
+             
         }
         else{
             
@@ -73,6 +96,10 @@ class TableViewController: UITableViewController {
             }
             
             self.tableViewTest.reloadData()
+            
+            dismiss(animated: false, completion: nil)
+            
+          
         }
              
     }

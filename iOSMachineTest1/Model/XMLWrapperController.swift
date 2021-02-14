@@ -31,7 +31,6 @@ class XMLWrapperController: UIViewController,XMLParserDelegate {
             u = Global.url
         }
         
-        print("url 2 ",u)
         
         let url = URL(string: u)!
         
@@ -85,8 +84,6 @@ class XMLWrapperController: UIViewController,XMLParserDelegate {
             books.append(book)
             
             Global.books1 = books
-            print("model 2 ",Global.books1)
-            
             
         }
         else if elementName == "itune" {
